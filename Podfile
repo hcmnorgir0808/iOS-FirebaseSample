@@ -6,7 +6,8 @@ target 'iOS-FirebaseSample' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  # Pods for iOS-FirebaseSample
+  pod 'Firebase/Firestore'
+# Pods for iOS-FirebaseSample
 
   target 'iOS-FirebaseSampleTests' do
     inherit! :search_paths

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AuthenticationViewController.swift
 //  iOS-FirebaseSample
 //
 //  Created by yaiwamoto on 20/04/2020.
@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController {
+class AuthenticationViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var email: UITextField!
