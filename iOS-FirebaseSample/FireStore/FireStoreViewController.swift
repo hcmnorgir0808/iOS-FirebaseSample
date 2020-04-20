@@ -15,6 +15,7 @@ class FireStoreViewController: UIViewController {
     @IBOutlet weak var mail: UITextField!
     @IBOutlet weak var age: UITextField!
     @IBOutlet weak var data: UITextView!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     
     var db: Firestore?
     var people: CollectionReference?
@@ -22,10 +23,17 @@ class FireStoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        indicatorView.hidesWhenStopped = true
+        indicatorView.startAnimating()
+        
+        data.layer.borderColor = UIColor.black.cgColor
+        data.layer.borderWidth = 1.0
+        
         self.db = Firestore.firestore()
         self.people = db?.collection("people")
         
-        self.people?.addSnapshotListener() { (querySnapshot, err) in
+        self.people?.addSnapshotListener() { [weak self] (querySnapshot, err) in
+            guard let strongSelf = self else { return }
             var res = ""
             querySnapshot?.documents.forEach {
                 let nm = $0.get("name") as! String
@@ -33,16 +41,10 @@ class FireStoreViewController: UIViewController {
                 let ag = $0.get("age") as! Int
                 res += nm + "[" + ml + ":" + String(ag) + "]" + "\n"
             }
-            self.data.text = res
+            strongSelf.indicatorView.stopAnimating()
+            strongSelf.data.text = res
+            
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
     }
     
     @IBAction func doAction(_ sender: Any) {
@@ -59,6 +61,4 @@ class FireStoreViewController: UIViewController {
             people?.addDocument(data: data)
         }
     }
-    
-    
 }

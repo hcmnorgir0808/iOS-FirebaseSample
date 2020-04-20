@@ -19,6 +19,7 @@ class StorageViewController: UIViewController {
 
         indicatorView.hidesWhenStopped = true
         indicatorView.startAnimating()
+        
         data.layer.borderColor = UIColor.black.cgColor
         data.layer.borderWidth = 1.0
         
@@ -27,9 +28,10 @@ class StorageViewController: UIViewController {
         let txtRef = storage.reference(withPath: "sample.txt")
         let MAX_SIZE: Int64 = 1024 * 1024
         txtRef.getData(maxSize: MAX_SIZE) { [weak self] result, error in
+            guard let strongSelf = self else { return }
             if error == nil {
-                self?.data.text = String(data: result!, encoding: String.Encoding.utf8)
-                self?.indicatorView.stopAnimating()
+                strongSelf.data.text = String(data: result!, encoding: String.Encoding.utf8)
+                strongSelf.indicatorView.stopAnimating()
             }
         }
     }

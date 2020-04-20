@@ -17,7 +17,6 @@ class RootViewController: UIViewController {
 
         tableView.dataSource = self
         tableView.delegate = self
-        // Do any additional setup after loading the view.
     }
 }
 

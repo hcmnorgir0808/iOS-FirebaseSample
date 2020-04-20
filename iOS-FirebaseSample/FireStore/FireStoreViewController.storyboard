@@ -77,6 +77,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="psp-X3-62r">
+                                <rect key="frame" x="197" y="642" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="YuC-HA-XPN"/>
@@ -85,6 +89,7 @@
                     <connections>
                         <outlet property="age" destination="gZU-kb-64b" id="OIg-r1-PPm"/>
                         <outlet property="data" destination="5NJ-MM-x70" id="Etn-9A-3F2"/>
+                        <outlet property="indicatorView" destination="psp-X3-62r" id="0x9-tQ-eWk"/>
                         <outlet property="mail" destination="Mpi-xH-OMn" id="pbZ-RE-M6K"/>
                         <outlet property="name" destination="cS2-nZ-0MQ" id="1cu-We-cdd"/>
                     </connections>

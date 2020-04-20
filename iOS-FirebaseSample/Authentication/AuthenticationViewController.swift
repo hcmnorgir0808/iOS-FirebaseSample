@@ -26,15 +26,16 @@ class AuthenticationViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        changed = Auth.auth().addStateDidChangeListener { (auth, user) in
-            self.label.text = user?.email
+        changed = Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
+            guard let strongSelf = self else { return }
+            self?.label.text = user?.email
             
             if user != nil {
-                self.isLogin = true
-                self.button.titleLabel?.text = "LogOut"
+                strongSelf.isLogin = true
+                strongSelf.button.setTitle("LogOut", for: .normal)
             } else {
-                self.isLogin = false
-                self.button.titleLabel?.text = "LogIn"
+                strongSelf.isLogin = false
+                strongSelf.button.setTitle("LogIn", for: .normal)
             }
         }
     }
@@ -58,9 +59,10 @@ class AuthenticationViewController: UIViewController {
                 
             }
         } else {
-            Auth.auth().signIn(withEmail: email ?? "", password: pass ?? "") { (user, error) in
+            Auth.auth().signIn(withEmail: email ?? "", password: pass ?? "") { [weak self] (user, error) in
+                guard let strongSelf = self else { return }
                 if error != nil {
-                    self.label.text = error?.localizedDescription
+                    strongSelf.label.text = error?.localizedDescription
                     return
                 }
             }
