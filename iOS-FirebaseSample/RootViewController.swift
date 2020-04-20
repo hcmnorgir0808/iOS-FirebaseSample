@@ -45,6 +45,10 @@ extension RootViewController: UITableViewDelegate {
             if let vc = UIStoryboard(name: "FireStoreViewController", bundle: nil).instantiateInitialViewController() {
                 navigationController?.pushViewController(vc, animated: true)
             }
+        case .storage:
+            if let vc = UIStoryboard(name: "StorageViewController", bundle: nil).instantiateInitialViewController() {
+                navigationController?.pushViewController(vc, animated: true)
+            }
         case .none:
             break
         }
@@ -54,4 +58,5 @@ extension RootViewController: UITableViewDelegate {
 enum Row: String, CaseIterable {
     case authentication
     case firestore
+    case storage
 }

@@ -7,6 +7,7 @@ target 'iOS-FirebaseSample' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
 # Pods for iOS-FirebaseSample
 
   target 'iOS-FirebaseSampleTests' do

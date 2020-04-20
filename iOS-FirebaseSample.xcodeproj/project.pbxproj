@@ -22,6 +22,8 @@
 		C6D3C20C244CDFC300CF4137 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D3C20B244CDFC300CF4137 /* RootViewController.swift */; };
 		C6D3C210244CE8B000CF4137 /* FireStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D3C20F244CE8B000CF4137 /* FireStoreViewController.swift */; };
 		C6D3C212244CE8C800CF4137 /* FireStoreViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D3C211244CE8C800CF4137 /* FireStoreViewController.storyboard */; };
+		C6D3C217244CF9B600CF4137 /* StorageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D3C216244CF9B600CF4137 /* StorageViewController.storyboard */; };
+		C6D3C219244CF9C200CF4137 /* StorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D3C218244CF9C200CF4137 /* StorageViewController.swift */; };
 		C7828EAFE73D533EB0BDD2CB /* Pods_iOS_FirebaseSample_iOS_FirebaseSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77934F3F0BAB86695B357F70 /* Pods_iOS_FirebaseSample_iOS_FirebaseSampleUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,8 @@
 		C6D3C20B244CDFC300CF4137 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C6D3C20F244CE8B000CF4137 /* FireStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreViewController.swift; sourceTree = "<group>"; };
 		C6D3C211244CE8C800CF4137 /* FireStoreViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FireStoreViewController.storyboard; sourceTree = "<group>"; };
+		C6D3C216244CF9B600CF4137 /* StorageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StorageViewController.storyboard; sourceTree = "<group>"; };
+		C6D3C218244CF9C200CF4137 /* StorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewController.swift; sourceTree = "<group>"; };
 		C7D037C5514AAD35016657A8 /* Pods-iOS-FirebaseSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-FirebaseSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-iOS-FirebaseSampleTests/Pods-iOS-FirebaseSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E77223098CC97CD57EB48615 /* Pods-iOS-FirebaseSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-FirebaseSample.release.xcconfig"; path = "Target Support Files/Pods-iOS-FirebaseSample/Pods-iOS-FirebaseSample.release.xcconfig"; sourceTree = "<group>"; };
 		FAC3EED943CCDD7F7C0733E2 /* Pods_iOS_FirebaseSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_FirebaseSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +145,7 @@
 				C6D3C1D1244CBCB500CF4137 /* SceneDelegate.swift */,
 				C6D3C20D244CE87700CF4137 /* Authentication */,
 				C6D3C20E244CE88900CF4137 /* FireStore */,
+				C6D3C213244CF98C00CF4137 /* Storage */,
 				C6D3C20B244CDFC300CF4137 /* RootViewController.swift */,
 				C6D3C209244CDF6900CF4137 /* RootViewController.storyboard */,
 				C6D3C1D8244CBCBC00CF4137 /* Assets.xcassets */,
@@ -184,6 +189,15 @@
 				C6D3C211244CE8C800CF4137 /* FireStoreViewController.storyboard */,
 			);
 			path = FireStore;
+			sourceTree = "<group>";
+		};
+		C6D3C213244CF98C00CF4137 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				C6D3C218244CF9C200CF4137 /* StorageViewController.swift */,
+				C6D3C216244CF9B600CF4137 /* StorageViewController.storyboard */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		D87ABA354C3B8220D2C43034 /* Pods */ = {
@@ -314,6 +328,7 @@
 				C6D3C20A244CDF6900CF4137 /* RootViewController.storyboard in Resources */,
 				C6D3C204244CD78700CF4137 /* GoogleService-Info.plist in Resources */,
 				C6D3C212244CE8C800CF4137 /* FireStoreViewController.storyboard in Resources */,
+				C6D3C217244CF9B600CF4137 /* StorageViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +458,7 @@
 			files = (
 				C6D3C210244CE8B000CF4137 /* FireStoreViewController.swift in Sources */,
 				C6D3C1D4244CBCB500CF4137 /* AuthenticationViewController.swift in Sources */,
+				C6D3C219244CF9C200CF4137 /* StorageViewController.swift in Sources */,
 				C6D3C1D0244CBCB500CF4137 /* AppDelegate.swift in Sources */,
 				C6D3C20C244CDFC300CF4137 /* RootViewController.swift in Sources */,
 				C6D3C1D2244CBCB500CF4137 /* SceneDelegate.swift in Sources */,
